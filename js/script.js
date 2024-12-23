@@ -25,8 +25,28 @@ for (let i = 0; i < linkAll.length; i++) {
 
 
 
+const modalBlock = document.querySelector('.modal-block');
+const contractBlock = document.querySelector('.contract');
+const openContractButton = document.querySelector('.open-contract');
+const dataProtection = document.querySelector('.data-protection');
+const protectionSpan = document.querySelector('.protection');
 
 
+function openModal(block) {
+  modalBlock.classList.add('_show');
+  block.classList.add('_show'); 
+}
+
+openContractButton.addEventListener('click', () => openModal(contractBlock));
+protectionSpan.addEventListener('click', () => openModal(dataProtection));
+modalBlock.onclick = function(e){
+  if (e.target.classList.contains('modal-block')){
+    modalBlock.classList.remove('_show');
+    contractBlock.classList.remove('_show');
+    dataProtection.classList.remove('_show');
+  }
+
+}
 
 
 
