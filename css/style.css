@@ -311,7 +311,7 @@ h2 {
 }
 
 .price-box h4 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color1);
   margin-bottom: 20px;
@@ -322,11 +322,11 @@ h2 {
   gap: 16px;
   align-items: end;
   font-size: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .price-box__cost span {
-  font-size: 56px;
+  font-size: 46px;
   font-weight: 700;
   transform: translateY(16px);
 }
@@ -336,6 +336,7 @@ h2 {
   flex-direction: column;
   gap: 16px;
   list-style-type: none;
+  margin-top: 20px;
 }
 
 .price-box li {
@@ -351,6 +352,10 @@ h2 {
 
 .price-box_pro h4 {
   color: var(--color2);
+}
+
+.text_green{
+  color: var(--color3);
 }
 
 
@@ -559,7 +564,7 @@ footer {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #f1fde9de;
+  background-color: #32760455;
   z-index: 10;
   top: 0;
   left: 0;
