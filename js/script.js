@@ -29,7 +29,7 @@ const modalBlock = document.querySelector('.modal-block');
 const contractBlock = document.querySelector('.contract');
 const openContractButton = document.querySelector('.open-contract');
 const dataProtection = document.querySelector('.data-protection');
-const protectionSpan = document.querySelector('.protection');
+// const protectionSpan = document.querySelector('.protection');
 
 
 function openModal(block) {
@@ -38,7 +38,7 @@ function openModal(block) {
 }
 
 openContractButton.addEventListener('click', () => openModal(contractBlock));
-protectionSpan.addEventListener('click', () => openModal(dataProtection));
+// protectionSpan.addEventListener('click', () => openModal(dataProtection));
 modalBlock.onclick = function(e){
   if (e.target.classList.contains('modal-block')){
     modalBlock.classList.remove('_show');
@@ -59,49 +59,49 @@ modalBlock.onclick = function(e){
 
 
 
-const lang = document.documentElement.lang;
-const formContact = document.querySelector('.contact form');
-const formIframe = formContact.querySelector('iframe');
-let chatToken = '';
-document.addEventListener("DOMContentLoaded", function () {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', './js/chatToken.php', true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = xhr.responseText;
-      var a = response.trim(); // Убираем возможные лишние пробелы и переносы строки
-      chatToken = a;
-    }
-  };
-  xhr.send();
-});
+// const lang = document.documentElement.lang;
+// const formContact = document.querySelector('.contact form');
+// const formIframe = formContact.querySelector('iframe');
+// let chatToken = '';
+// document.addEventListener("DOMContentLoaded", function () {
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('GET', './js/chatToken.php', true);
+//   xhr.onload = function () {
+//     if (xhr.status === 200) {
+//       var response = xhr.responseText;
+//       var a = response.trim(); // Убираем возможные лишние пробелы и переносы строки
+//       chatToken = a;
+//     }
+//   };
+//   xhr.send();
+// });
 
-formIframe.onload = function () {
-  const formSubmitBlock = formContact.querySelector('.form-submit');
-  formSubmitBlock.classList.add('_show');
+// formIframe.onload = function () {
+//   const formSubmitBlock = formContact.querySelector('.form-submit');
+//   formSubmitBlock.classList.add('_show');
 
-  setTimeout(() => {
-    formContact.reset();
-    formSubmitBlock.classList.remove('_show');
-  }, 3000);
+//   setTimeout(() => {
+//     formContact.reset();
+//     formSubmitBlock.classList.remove('_show');
+//   }, 3000);
 
-  const chatId = '396606827';
-  const Name = formContact.querySelector('#name').value;
-  const Tel = formContact.querySelector('#tel').value;
-  const messageText = `‼️ \nНовый заказ на меню\n🔘 Имя - ${Name}\n🔘 Телефон - ${Tel} \n🔘 Язык - ${lang}`;
+//   const chatId = '396606827';
+//   const Name = formContact.querySelector('#name').value;
+//   const Tel = formContact.querySelector('#tel').value;
+//   const messageText = `‼️ \nНовый заказ на меню\n🔘 Имя - ${Name}\n🔘 Телефон - ${Tel} \n🔘 Язык - ${lang}`;
 
-  const url = `https://api.telegram.org/bot${chatToken}/sendMessage`;
-  const params = {
-    chat_id: chatId,
-    text: messageText,
-  };
-  axios.post(url, params)
-    .then(response => {
+//   const url = `https://api.telegram.org/bot${chatToken}/sendMessage`;
+//   const params = {
+//     chat_id: chatId,
+//     text: messageText,
+//   };
+//   axios.post(url, params)
+//     .then(response => {
 
-    })
-    .catch(error => {
+//     })
+//     .catch(error => {
 
-    });
-  return false
+//     });
+//   return false
 
-}
+// }

@@ -422,6 +422,25 @@ h2 {
   font-size: 24px;
 }
 
+.contact__list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact__list a{
+  font-size: 40px;
+  transition: 0.5s;
+}
+.contact__list a:hover{
+  transform: scale(1.2);
+}
+
+.email{
+  color: rgb(187, 75, 6);
+}
+
 .contact form {
   max-width: 500px;
   margin: auto;
