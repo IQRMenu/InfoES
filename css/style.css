@@ -21,8 +21,8 @@ body {
 
   --color1: #170e21;
   --color2: #ffffff;
-  --color3: #85b864;
-  --color4: #b7eb94a8;
+  --color3: #c3690f;
+  --color4: #bd904ca8;
   --color5: #ffffff;
 }
 
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav {
-  background-color: #00000042;
+  background-color: #00000088;
   border-radius: 0 0 20px 20px;
   position: fixed;
   top: 0;
@@ -82,6 +82,19 @@ nav {
 .nav__links a:hover {
   color: var(--color4);
 }
+
+.nav__socialLinks{
+  font-size: 24px;
+  gap: 20px;
+  display: flex;
+}
+.nav__socialLinks a{
+  color: var(--color2) !important;
+}
+.nav__socialLinks a:hover{
+  color: var(--color4) !important;
+}
+
 
 @keyframes gradient-animation {
   0% {
@@ -161,7 +174,7 @@ h1 {
 }
 
 .header__elements ul {
-  list-style-type: none;
+  /* list-style-type: none; */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -173,7 +186,7 @@ h1 {
   position: relative;
 }
 
-.header__elements li::before {
+/* .header__elements li::before {
   content: '';
   display: block;
   width: 16px;
@@ -182,7 +195,7 @@ h1 {
   position: absolute;
   top: calc(50% - 1px);
   left: -26px;
-}
+} */
 
 section {
   padding: 80px 0;
@@ -427,6 +440,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 .contact__list a{
@@ -583,7 +597,7 @@ footer {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #32760455;
+  background-color: var(--color4);
   z-index: 10;
   top: 0;
   left: 0;
