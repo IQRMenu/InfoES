@@ -96,7 +96,8 @@
   .header__elements ul{
     text-align-last: left;
     margin: auto;
-    width: max-content;
+    margin-left: 25px;
+    /* width: max-content; */
   }
 
   .what__text-block h3{
